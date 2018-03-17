@@ -37,13 +37,6 @@ namespace ClassLibrary
 
         public static void BytesToFile(string path, byte [] fileBytes)
         {
-            /*FileStream aFile = new FileStream(path, FileMode.Create);
-            BinaryWriter f = new BinaryWriter(aFile);
-            for (int i = 0; i < fileBytes.Length; i++)
-                f.Write(fileBytes[i]);
-            f.Close();
-            aFile.Close();*/
-
             File.WriteAllBytes(path, fileBytes);
         }
     }

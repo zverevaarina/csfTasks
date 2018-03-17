@@ -13,7 +13,7 @@ namespace Ex_2
 {
     public partial class Form_Ex_2 : Form
     {
-        static File_Ex_2 file;
+        File_Ex_2 file;
         public Form_Ex_2()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Ex_2
             {
                 try
                 {
-                    File_Ex_2 file = new File_Ex_2(openFileDialog.FileNames);
+                    file = new File_Ex_2(openFileDialog.FileNames);
                     labelOpen.Text = "Файлы загружены";
                 }
                 catch (Exception exp)
@@ -43,7 +43,7 @@ namespace Ex_2
 
         private void buttonSwap_Click(object sender, EventArgs e)
         {
-            File_Ex_2 file = new File_Ex_2(openFileDialog.FileNames);
+            file = new File_Ex_2(openFileDialog.FileNames);
             file.Swap();
             labelSwap.Text = "Программа завершила работу";
         }
@@ -54,7 +54,7 @@ namespace Ex_2
             {
                 try
                 {
-                    IOUtils.BytesToFile(saveFileDialog1.FileName, file.FileText2);
+                    IOUtils.BytesToFile(saveFileDialog1.FileName, file.FileText1);
                     labelSave1.Text = "Файл сохранен";
                 }
                 catch (Exception exp)

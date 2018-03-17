@@ -20,7 +20,7 @@ namespace ClassLibrary
 
         }
 
-        public void Swap(/*byte[] FileText1, byte[] FileText2*/)
+        public void Swap()
         {
             if (FileText1.Length > FileText2.Length)
             {
